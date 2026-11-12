@@ -68,8 +68,8 @@ export async function start(args: CliArgs, config: ResolvedConfig): Promise<numb
   if (!isLoopbackHost(args.host)) console.warn(c.red(c.bold(`⚠ Binding to ${args.host}: anyone who can reach this address and has the session link can read your settings.`)));
   await selfCheck(config, pem);
 
-  const { name, version } = packageInfo();
-  const update = checkForUpdate(name, version); // runs in the background
+  const { version } = packageInfo();
+  const update = checkForUpdate(version); // runs in the background
 
   const port = await findFreePort(args.port, args.host);
   if (port !== args.port) console.log(c.dim(`Port ${args.port} is busy; using ${port}.`));

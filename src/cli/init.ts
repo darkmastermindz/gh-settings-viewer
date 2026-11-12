@@ -12,6 +12,14 @@ import { runManifestFlow } from './manifest-flow.ts';
 import { openBrowser } from './open-browser.ts';
 import { ask, choose, confirm } from './prompt.ts';
 
+function hostOf(url: string): string {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return '';
+  }
+}
+
 export function enterpriseSteps(webBaseUrl: string, kind: 'enterprise-owned' | 'add-to-existing', enterprise?: string): string {
   const ent = enterprise ?? 'YOUR-ENTERPRISE';
   const perms = ENTERPRISE_READ_PERMISSIONS.map((p) => `      - ${p.title}: Read-only`).join('\n');
@@ -44,7 +52,7 @@ export async function init(flags: ConfigFlags): Promise<number> {
       { value: 'ghecom', label: 'GHE.com (data residency, e.g. octocorp.ghe.com)' },
       { value: 'ghes', label: 'GitHub Enterprise Server' },
     ],
-    existing.apiBaseUrl && existing.apiBaseUrl !== 'https://api.github.com' ? (existing.apiBaseUrl.includes('.ghe.com') ? 'ghecom' : 'ghes') : 'dotcom',
+    existing.apiBaseUrl && existing.apiBaseUrl !== 'https://api.github.com' ? (hostOf(existing.apiBaseUrl).endsWith('.ghe.com') ? 'ghecom' : 'ghes') : 'dotcom',
   );
   let apiBaseUrl = 'https://api.github.com';
   if (host === 'ghecom') apiBaseUrl = `https://api.${(await ask('Your GHE.com subdomain (the part before .ghe.com)')).replace(/\.ghe\.com.*$/, '')}.ghe.com`;

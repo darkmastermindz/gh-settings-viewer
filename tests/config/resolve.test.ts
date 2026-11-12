@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { readFileSync, statSync, writeFileSync } from 'node:fs';
+import { statSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { describe, it } from 'node:test';
 import { checkKeyFilePermissions, writePrivateKeyFile } from '../../src/core/config/key-file.ts';
@@ -79,9 +79,8 @@ describe('private key file', () => {
     writePrivateKeyFile(p, 'pem');
     assert.equal(statSync(p).mode & 0o777, 0o600);
     assert.equal(checkKeyFilePermissions(p).ok, true);
-    writeFileSync(p, 'pem', { mode: 0o644 });
     const loose = join(dir, 'loose.pem');
-    writeFileSync(loose, readFileSync(p), { mode: 0o644 });
+    writeFileSync(loose, 'pem', { mode: 0o644 });
     const check = checkKeyFilePermissions(loose);
     assert.equal(check.ok, false);
     assert.match(check.warning!, /chmod 600/);

@@ -4,7 +4,7 @@ import { parseCli, DEFAULT_PORT } from '../../src/cli/args.ts';
 import { enterpriseSteps } from '../../src/cli/init.ts';
 import { buildManifest, exchangeCode, registrationUrl } from '../../src/cli/manifest-flow.ts';
 import { findFreePort } from '../../src/cli/ports.ts';
-import { isNewer } from '../../src/cli/update-check.ts';
+import { isNewer, isTrustedVersion } from '../../src/cli/update-check.ts';
 import { createServer } from 'node:net';
 
 describe('CLI arguments', () => {
@@ -82,5 +82,9 @@ describe('update notice', () => {
     assert.ok(isNewer('1.0.0', '0.9.9'));
     assert.ok(!isNewer('0.1.0', '0.1.0'));
     assert.ok(!isNewer('0.1.0', '0.2.0'));
+  });
+  it('only trusts plain semver from the registry or cache', () => {
+    assert.ok(isTrustedVersion('1.2.3') && isTrustedVersion('1.2.3-beta.1'));
+    for (const bad of ['1.2.3\u001b[2J', '1.2', '../../x', '1.2.3; rm -rf /', '', 42, null]) assert.equal(isTrustedVersion(bad), false, String(bad));
   });
 });
