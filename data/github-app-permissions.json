@@ -1,0 +1,4094 @@
+{
+  "source": {
+    "repository": "github/docs",
+    "commit": "dd7d394b2d2b43d3f4f51091026921d7f539f7e8",
+    "version": "ghec-2022-11-28",
+    "file": "src/github-apps/data/ghec-2022-11-28/server-to-server-permissions.json"
+  },
+  "permissions": {
+    "enterprise_copilot_usage": {
+      "title": "Copilot usage records",
+      "category": "enterprise",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/copilot/usage-records",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "enterprise_custom_enterprise_roles": {
+      "title": "Custom enterprise roles",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/enterprise-roles",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/enterprise-roles/{role_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/enterprise-roles/{role_id}/teams",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/enterprise-roles/{role_id}/users",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_custom_properties": {
+      "title": "Custom properties",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/properties/schema",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/properties/schema/{custom_property_name}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_ai_controls": {
+      "title": "Enterprise AI controls",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/copilot/apps/model-policies",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/content_exclusion",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/custom-agents",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/custom-agents/source",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/feature-policies",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/fusion/model-policies",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/model-policies",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/teams/{team_id}/copilot/model-policies",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_copilot_licenses": {
+      "title": "Enterprise Copilot license management",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/copilot/billing/seats",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/enterprises/{enterprise}/members/{username}/copilot",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "enterprise_copilot_metrics": {
+      "title": "Enterprise Copilot metrics",
+      "category": "enterprise",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/copilot/metrics/reports/enterprise-1-day",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/metrics/reports/enterprise-28-day/latest",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/metrics/reports/repos-1-day",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/metrics/reports/user-teams-1-day",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/metrics/reports/users-1-day",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/copilot/metrics/reports/users-28-day/latest",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_licensing": {
+      "title": "Enterprise Licensing",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/visual-studio-subscriptions",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_ref_rules": {
+      "title": "Enterprise Ruleset",
+      "category": "enterprise",
+      "accessLevels": [
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/rulesets/{ruleset_id}",
+          "access": "write",
+          "additional": true
+        },
+        {
+          "path": "/enterprises/{enterprise}/rulesets/{ruleset_id}/history",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/rulesets/{ruleset_id}/history/{version_id}",
+          "access": "write",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_scim": {
+      "title": "Enterprise SCIM",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/scim/v2/enterprises/{enterprise}/Groups",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/scim/v2/enterprises/{enterprise}/Groups/{scim_group_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/scim/v2/enterprises/{enterprise}/Users",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/scim/v2/enterprises/{enterprise}/Users/{scim_user_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_access_restrictions": {
+      "title": "Enterprise access restrictions",
+      "category": "enterprise",
+      "accessLevels": [
+        "write"
+      ],
+      "get": []
+    },
+    "enterprise_billing": {
+      "title": "Enterprise billing",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/ai_credit/usage",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/budgets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/budgets/{budget_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/budgets/{budget_id}/user-states",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/cost-centers",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/cost-centers/{cost_center_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/cost-centers/memberships",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/premium_request/usage",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/reports",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/reports/{report_id}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/usage",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/settings/billing/usage/summary",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_bypass_requests": {
+      "title": "Enterprise bypass requests",
+      "category": "enterprise",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/bypass-requests/push-rules",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_credentials": {
+      "title": "Enterprise credentials",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/credentials",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/credentials/{inventory_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/credentials/exports/{export_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_custom_properties_for_organizations": {
+      "title": "Enterprise custom properties for organizations",
+      "category": "enterprise",
+      "accessLevels": [
+        "admin",
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/org-properties/schema",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/org-properties/schema/{custom_property_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/org-properties/values",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_innersource_vulnerabilities": {
+      "title": "Enterprise innersource vulnerabilities",
+      "category": "enterprise",
+      "accessLevels": [
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/innersource-vulnerabilities/sync/status/{job_id}",
+          "access": "write",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_license_policy": {
+      "title": "Enterprise license policy",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/license-compliance/policies/{policy_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "enterprise_organization_installation_repositories": {
+      "title": "Enterprise organization installation repositories",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/apps/installable_organizations/{org}/accessible_repositories",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/enterprises/{enterprise}/apps/organizations/{org}/installations/{installation_id}/repositories",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "enterprise_organization_installations": {
+      "title": "Enterprise organization installations",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/apps/installable_organizations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/apps/installable_organizations/{org}/accessible_repositories",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/enterprises/{enterprise}/apps/organizations/{org}/installations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/apps/organizations/{org}/installations/{installation_id}/repositories",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "enterprise_security_products": {
+      "title": "Enterprise security products",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/dependabot/repository-access",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "enterprise_teams": {
+      "title": "Enterprise teams",
+      "category": "enterprise",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprises/{enterprise}/members/{username}/teams",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/teams",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/teams/{enterprise-team}/memberships",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/teams/{enterprise-team}/memberships/{username}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/teams/{enterprise-team}/organizations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/teams/{enterprise-team}/organizations/{org}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/enterprises/{enterprise}/teams/{team_slug}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_api_insights": {
+      "title": "API Insights",
+      "category": "organization",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/insights/api/route-stats/{actor_type}/{actor_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/insights/api/subject-stats",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/insights/api/summary-stats",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/insights/api/summary-stats/{actor_type}/{actor_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/insights/api/summary-stats/users/{user_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/insights/api/time-stats",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/insights/api/time-stats/{actor_type}/{actor_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/insights/api/time-stats/users/{user_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/insights/api/user-stats/{user_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_administration": {
+      "title": "Administration",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/enterprise-installation/{enterprise_or_org}/server-statistics",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/organizations/{org}/actions/cache/retention-limit",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/organizations/{org}/actions/cache/storage-limit",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/organizations/{organization_id}/custom_roles",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/actions/cache/usage",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/cache/usage-by-repository",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/hosted-runners",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/hosted-runners/{hosted_runner_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/hosted-runners/images/github-owned",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/hosted-runners/images/partner",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/hosted-runners/limits",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/hosted-runners/machine-sizes",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/hosted-runners/platforms",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/oidc/customization/properties/repo",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/oidc/customization/sub",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/permissions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/permissions/artifact-and-log-retention",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/permissions/fork-pr-contributor-approval",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/permissions/fork-pr-workflows-private-repos",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/permissions/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/permissions/selected-actions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/permissions/self-hosted-runners",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/permissions/self-hosted-runners/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/permissions/workflow",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/policies",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/policies/{policy_id}",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/audit-log",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/bypass-requests/push-rules",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/code-scanning/ai-scan",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/code-security/configurations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/code-security/configurations/{configuration_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/code-security/configurations/{configuration_id}/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/code-security/configurations/defaults",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot/billing",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/copilot/billing/seats",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/copilot/feature-policies",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot/model-policies",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/credential-authorizations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/custom_roles/{role_id}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/custom-repository-roles",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/custom-repository-roles/{role_id}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/dependabot/repository-access",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/fine_grained_permissions",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/installations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/interaction-limits",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/interaction-limits/pulls/creation-cap",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/members/{username}/copilot",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/repository-fine-grained-permissions",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/rulesets",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/rulesets/{ruleset_id}",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/rulesets/{ruleset_id}/history",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/rulesets/{ruleset_id}/history/{version_id}",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/rulesets/rule-suites",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/rulesets/rule-suites/{rule_suite_id}",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/secret-scanning/custom-patterns",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/secret-scanning/pattern-configurations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/security-managers",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/settings/billing/advanced-security",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/settings/immutable-releases",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/settings/immutable-releases/repositories",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_agent_secrets": {
+      "title": "Agent secrets",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/agents/secrets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/agents/secrets/{secret_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/agents/secrets/{secret_name}/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/agents/secrets/public-key",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_agent_variables": {
+      "title": "Agent variables",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/agents/variables",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/agents/variables/{name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/agents/variables/{name}/repositories",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_user_blocking": {
+      "title": "Blocking users",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/blocks",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/blocks/{username}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_campaigns": {
+      "title": "Campaigns",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/campaigns",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/campaigns/{campaign_number}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_copilot_spaces": {
+      "title": "Copilot Spaces",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/copilot-spaces",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot-spaces/{space_number}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot-spaces/{space_number}/resources",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot-spaces/{space_number}/resources/{space_resource_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_copilot_agent_settings": {
+      "title": "Copilot agent settings",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/copilot/coding-agent/permissions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot/coding-agent/permissions/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/teams/{team_slug}/copilot/customizations",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "org_copilot_content_exclusion": {
+      "title": "Copilot content exclusion",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/copilot/content_exclusion",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_custom_org_roles": {
+      "title": "Custom organization roles",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/organization-fine-grained-permissions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/organization-roles",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/organization-roles/{role_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "custom_properties_for_organizations": {
+      "title": "Custom properties for organizations",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/organizations/{org}/org-properties/values",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_custom_properties": {
+      "title": "Custom properties",
+      "category": "organization",
+      "accessLevels": [
+        "admin",
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/properties/schema",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/properties/schema/{custom_property_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/properties/values",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_custom_roles": {
+      "title": "Custom repository roles",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/organizations/{organization_id}/custom_roles",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/custom_roles/{role_id}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/custom-repository-roles",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/custom-repository-roles/{role_id}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/fine_grained_permissions",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/repository-fine-grained-permissions",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "organization_events": {
+      "title": "Events",
+      "category": "organization",
+      "accessLevels": [
+        "read"
+      ],
+      "get": []
+    },
+    "organization_external_properties_for_repos": {
+      "title": "External custom properties for repositories",
+      "category": "organization",
+      "accessLevels": [
+        "admin",
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/properties/installations",
+          "access": "admin",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/properties/installations/schema",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_copilot_seat_management": {
+      "title": "GitHub Copilot Business",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/copilot-spaces/{space_number}/collaborators",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot/billing",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/copilot/billing/seats",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/members/{username}/copilot",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "organization_runner_custom_images": {
+      "title": "Hosted runner custom images",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/actions/hosted-runners/images/custom",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/hosted-runners/images/custom/{image_definition_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/hosted-runners/images/custom/{image_definition_id}/versions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/hosted-runners/images/custom/{image_definition_id}/versions/{version}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "issue_fields": {
+      "title": "Issue Fields",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/issue-fields",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "issue_types": {
+      "title": "Issue Types",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/issue-types",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "members": {
+      "title": "Members",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/external-group/{group_id}",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/external-groups",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/failed_invitations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/invitations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/invitations/{invitation_id}/teams",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/members",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/members/{username}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/memberships/{username}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/organization-roles/{role_id}/teams",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/organization-roles/{role_id}/users",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/outside_collaborators",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/public_members",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/public_members/{username}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/team-sync/groups",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/teams",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/teams/{team_slug}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/teams/{team_slug}/external-groups",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/teams/{team_slug}/invitations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/teams/{team_slug}/members",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/teams/{team_slug}/memberships/{username}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/teams/{team_slug}/repos",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/teams/{team_slug}/team-sync/group-mappings",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/teams/{team_slug}/teams",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/scim/v2/organizations/{org}/Users",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/scim/v2/organizations/{org}/Users/{scim_user_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/teams/{team_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/teams/{team_id}/invitations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/teams/{team_id}/members",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/teams/{team_id}/members/{username}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/teams/{team_id}/memberships/{username}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/teams/{team_id}/repos",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/teams/{team_id}/repos/{owner}/{repo}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/teams/{team_id}/team-sync/group-mappings",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/teams/{team_id}/teams",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_network_configurations": {
+      "title": "Network configurations",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/settings/network-configurations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/settings/network-configurations/{network_configuration_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/settings/network-settings/{network_settings_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_copilot_metrics": {
+      "title": "Organization Copilot metrics",
+      "category": "organization",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/copilot/metrics/reports/organization-1-day",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot/metrics/reports/organization-28-day/latest",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot/metrics/reports/repos-1-day",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot/metrics/reports/user-teams-1-day",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot/metrics/reports/users-1-day",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/copilot/metrics/reports/users-28-day/latest",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_announcement_banners": {
+      "title": "Organization announcement banners",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/announcement",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_secret_scanning_bypass_requests": {
+      "title": "Organization bypass requests for secret scanning",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/bypass-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/bypass-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/bypass-requests/secret-scanning/{bypass_request_number}",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "organization_codespaces_secrets": {
+      "title": "Organization codespaces secrets",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/codespaces/secrets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/codespaces/secrets/{secret_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/codespaces/secrets/{secret_name}/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/codespaces/secrets/public-key",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_codespaces_settings": {
+      "title": "Organization codespaces settings",
+      "category": "organization",
+      "accessLevels": [
+        "write"
+      ],
+      "get": []
+    },
+    "organization_codespaces": {
+      "title": "Organization codespaces",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/codespaces",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/members/{username}/codespaces",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "organization_dependabot_secrets": {
+      "title": "Organization dependabot secrets",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/dependabot/secrets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/dependabot/secrets/{secret_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/dependabot/secrets/{secret_name}/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/dependabot/secrets/public-key",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_dependabot_dismissal_requests": {
+      "title": "Organization dismissal requests for Dependabot",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/dismissal-requests/dependabot",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_code_scanning_dismissal_requests": {
+      "title": "Organization dismissal requests for code scanning",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/dismissal-requests/code-scanning",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/code-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/code-scanning/{alert_number}",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "organization_private_registries": {
+      "title": "Organization private registries",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/private-registries",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/private-registries/{secret_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/private-registries/public-key",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_personal_access_token_requests": {
+      "title": "Personal access token requests",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/personal-access-token-requests",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/personal-access-token-requests/{pat_request_id}/repositories",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_personal_access_tokens": {
+      "title": "Personal access tokens",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/personal-access-tokens",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/personal-access-tokens/{pat_id}/repositories",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_projects": {
+      "title": "Projects",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/projectsV2",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/projectsV2/{project_number}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/projectsV2/{project_number}/fields",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/projectsV2/{project_number}/fields/{field_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/projectsV2/{project_number}/items",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/projectsV2/{project_number}/items/{item_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/projectsV2/{project_number}/views/{view_number}/items",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "secret_scanning_dismissal_requests": {
+      "title": "Secret scanning alert dismissal requests",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/dismissal-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "organization_secrets": {
+      "title": "Secrets",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/actions/secrets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/secrets/{secret_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/secrets/{secret_name}/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/secrets/public-key",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_self_hosted_runners": {
+      "title": "Self-hosted runners",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/actions/runner-groups",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/runner-groups/{runner_group_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/runner-groups/{runner_group_id}/hosted-runners",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/runner-groups/{runner_group_id}/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/runner-groups/{runner_group_id}/runners",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/runners",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/runners/{runner_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/runners/{runner_id}/labels",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/runners/deprecations/{version}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/runners/downloads",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_actions_variables": {
+      "title": "Variables",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/actions/variables",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/variables/{name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/actions/variables/{name}/repositories",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "organization_hooks": {
+      "title": "Webhooks",
+      "category": "organization",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/hooks",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/hooks/{hook_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/hooks/{hook_id}/config",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/hooks/{hook_id}/deliveries",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/hooks/{hook_id}/deliveries/{delivery_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "actions": {
+      "title": "Actions",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/actions/artifacts",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/artifacts/{artifact_id}/{archive_format}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/cache/storage-limit",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/cache/usage",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/caches",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/concurrency_groups",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/concurrency_groups/{concurrency_group_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/jobs/{job_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/jobs/{job_id}/logs",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/jobs/{job_id}/steps/{step_number}/logs",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/oidc/customization/sub",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}/approvals",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}/artifacts",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/jobs",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}/attempts/{attempt_number}/logs",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}/concurrency_groups",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}/jobs",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}/logs",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runs/{run_id}/timing",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/workflows",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/workflows/{workflow_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/workflows/{workflow_id}/timing",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/{protection_rule_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}/deployment-branch-policies/{branch_policy_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "administration": {
+      "title": "Administration",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/actions/cache/retention-limit",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/permissions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/permissions/access",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/permissions/artifact-and-log-retention",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/permissions/fork-pr-contributor-approval",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/permissions/fork-pr-workflows-private-repos",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/permissions/selected-actions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/permissions/workflow",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/policies",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/policies/{policy_id}",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runners",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runners/{runner_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runners/{runner_id}/labels",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runners/deprecations/{version}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/runners/downloads",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/autolinks",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/autolinks/{autolink_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/automated-security-fixes",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}/protection",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}/protection/enforce_admins",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}/protection/required_pull_request_reviews",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}/protection/required_signatures",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}/protection/required_status_checks/contexts",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/apps",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/teams",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}/protection/restrictions/users",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-quality/setup",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/default-setup",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-security-configuration",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/copilot/code-review/settings",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dependabot/runner-settings",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}/deployment_protection_rules/apps",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/immutable-releases",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/interaction-limits",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/interaction-limits/pulls/bypass-list",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/interaction-limits/pulls/creation-cap",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/invitations",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/keys",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/keys/{key_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pages/health",
+          "access": "write",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/rulesets/{ruleset_id}/history",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/rulesets/{ruleset_id}/history/{version_id}",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/rulesets/rule-suites",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/rulesets/rule-suites/{rule_suite_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/secret-scanning/custom-patterns",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/teams",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/traffic/clones",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/traffic/popular/paths",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/traffic/popular/referrers",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/traffic/views",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/vulnerability-alerts",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "agent_secrets": {
+      "title": "Agent secrets",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/agents/organization-secrets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/agents/secrets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/agents/secrets/{secret_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/agents/secrets/public-key",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "agent_variables": {
+      "title": "Agent variables",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/agents/organization-variables",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/agents/variables",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/agents/variables/{name}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "artifact_metadata": {
+      "title": "Artifact metadata",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/artifacts/{subject_digest}/metadata/deployment-records",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/artifacts/{subject_digest}/metadata/storage-records",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/orgs/{org}/artifacts/metadata/deployment-record/cluster/{cluster}/jobs/{job_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "attestations": {
+      "title": "Attestations",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/attestations/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/attestations/{subject_digest}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "checks": {
+      "title": "Checks",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/check-runs/{check_run_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/check-runs/{check_run_id}/annotations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/check-suites/{check_suite_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/check-suites/{check_suite_id}/check-runs",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/commits/{ref}/check-runs",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/commits/{ref}/check-suites",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "code_quality": {
+      "title": "Code quality",
+      "category": "repository",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/code-quality/findings",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-quality/findings/{finding_number}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "security_events": {
+      "title": "Code scanning alerts",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/code-scanning/alerts",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/ai-scan",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/alerts",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/autofix",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/alerts/{alert_number}/instances",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/analyses",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/sarifs/{sarif_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/code-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/code-scanning/{alert_number}",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "codespaces_lifecycle_admin": {
+      "title": "Codespaces lifecycle admin",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": []
+    },
+    "codespaces_metadata": {
+      "title": "Codespaces metadata",
+      "category": "repository",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/codespaces/devcontainers",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/codespaces/machines",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "codespaces_secrets": {
+      "title": "Codespaces secrets",
+      "category": "repository",
+      "accessLevels": [
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/codespaces/secrets",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/codespaces/secrets/{secret_name}",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/codespaces/secrets/public-key",
+          "access": "write",
+          "additional": false
+        }
+      ]
+    },
+    "codespaces": {
+      "title": "Codespaces",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/codespaces",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/members/{username}/codespaces",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "statuses": {
+      "title": "Commit statuses",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/commits/{ref}/status",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/commits/{ref}/statuses",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "contents": {
+      "title": "Contents",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/activity",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/branches/{branch}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/bypass-requests/push-rules",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/bypass-requests/push-rules/{bypass_request_number}",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/codeql/databases",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/codeql/databases/{language}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/code-scanning/codeql/variant-analyses/{codeql_variant_analysis_id}/repos/{repo_owner}/{repo_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/codeowners/errors",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/commits",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/commits/{commit_sha}/branches-where-head",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/commits/{ref}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/community/profile",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/compare/{basehead}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/contents/{path}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dependency-graph/compare/{basehead}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dependency-graph/sbom",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dependency-graph/sbom/fetch-report/{sbom_uuid}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dependency-graph/sbom/generate-report",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/secret-scanning/{alert_number}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/git/blobs/{file_sha}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/git/commits/{commit_sha}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/git/matching-refs/{ref}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/git/ref/{ref}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/git/tags/{tag_sha}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/git/trees/{tree_sha}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}/merge-async/{uuid}",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/readme",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/readme/{dir}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/releases",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/releases/{release_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/releases/{release_id}/assets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/releases/assets/{asset_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/releases/latest",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/releases/tags/{tag}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/stargazers",
+          "access": "write",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/subscribers",
+          "access": "write",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/tarball/{ref}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/zipball/{ref}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "copilot_agent_settings": {
+      "title": "Copilot agent settings",
+      "category": "repository",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/copilot/cloud-agent/configuration",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "repository_custom_properties": {
+      "title": "Custom properties",
+      "category": "repository",
+      "accessLevels": [
+        "write"
+      ],
+      "get": []
+    },
+    "vulnerability_alerts": {
+      "title": "Dependabot alerts",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/dependabot/alerts",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dependabot/alerts",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dependabot/alerts/{alert_number}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/dependabot",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/dependabot/{alert_number}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "dependabot_secrets": {
+      "title": "Dependabot secrets",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/dependabot/secrets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dependabot/secrets/{secret_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dependabot/secrets/public-key",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "deployments": {
+      "title": "Deployments",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/deployments",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/deployments/{deployment_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/deployments/{deployment_id}/statuses",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/deployments/{deployment_id}/statuses/{status_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "environments": {
+      "title": "Environments",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}/secrets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}/secrets/public-key",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}/variables",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/environments/{environment_name}/variables/{name}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "installation_repositories": {
+      "title": "GitHub App installation repository access",
+      "category": "repository",
+      "accessLevels": [
+        "write"
+      ],
+      "get": []
+    },
+    "issues": {
+      "title": "Issues",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/assignees",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/assignees/{assignee}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/artifacts",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/artifacts/{artifact_number}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/assignees/{assignee}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/comments",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/dependencies/blocked_by",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/dependencies/blocking",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/events",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/issue-field-values",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/labels",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/parent",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/reactions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/relates_to",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/sub_issues",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/suggestions",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/timeline",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/comments",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/comments/{comment_id}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/events",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/events/{event_id}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/labels",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/labels/{name}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/milestones",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/milestones/{milestone_number}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/milestones/{milestone_number}/labels",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "metadata": {
+      "title": "Metadata",
+      "category": "repository",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/repos",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/collaborators",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/collaborators/{username}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/collaborators/{username}/permission",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/comments",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/comments/{comment_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/comments/{comment_id}/reactions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/commits/{commit_sha}/comments",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/contributors",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/events",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/forks",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/hash-algorithm",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issue-types",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/languages",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/license",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/private-vulnerability-reporting",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/properties/values",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/rules/branches/{branch}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/rulesets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/rulesets/{ruleset_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/stargazers/count",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/stargazers/history",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/stats/code_frequency",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/stats/commit_activity",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/stats/contributors",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/stats/participation",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/stats/punch_card",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/tags",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/topics",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repositories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/search/labels",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/users/{username}/repos",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "pages": {
+      "title": "Pages",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/pages",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pages/builds",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pages/builds/{build_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pages/builds/latest",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pages/health",
+          "access": "write",
+          "additional": true
+        }
+      ]
+    },
+    "pull_requests": {
+      "title": "Pull requests",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/assignees",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/assignees/{assignee}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/commits/{commit_sha}/pulls",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/artifacts",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/artifacts/{artifact_number}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/assignees/{assignee}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/comments",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/events",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/labels",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/suggestions",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/{issue_number}/timeline",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/comments",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/comments/{comment_id}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/issues/events/{event_id}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/labels",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/labels/{name}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/milestones",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/milestones/{milestone_number}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/milestones/{milestone_number}/labels",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}/comments",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}/commits",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}/files",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}/merge",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}/requested_reviewers",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}/reviews",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/{pull_number}/reviews/{review_id}/comments",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/comments",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/comments/{comment_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/stacks",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/stacks/{stack_number}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "repository_creation": {
+      "title": "Repository creation",
+      "category": "repository",
+      "accessLevels": [
+        "write"
+      ],
+      "get": []
+    },
+    "repository_license_policy": {
+      "title": "Repository license policy",
+      "category": "repository",
+      "accessLevels": [
+        "read"
+      ],
+      "get": []
+    },
+    "repository_advisories": {
+      "title": "Repository security advisories",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/security-advisories",
+          "access": "write",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/security-advisories",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/security-advisories/{ghsa_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/security-advisories/{ghsa_id}/comments",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/security-advisories/{ghsa_id}/comments/{comment_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "repo_secret_scanning_dismissal_requests": {
+      "title": "Secret scanning alert dismissal requests",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "secret_scanning_alerts": {
+      "title": "Secret scanning alerts",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/orgs/{org}/bypass-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/dismissal-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/orgs/{org}/secret-scanning/alerts",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/bypass-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/bypass-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/bypass-requests/secret-scanning/{bypass_request_number}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/dismissal-requests/secret-scanning/{alert_number}",
+          "access": "read",
+          "additional": true
+        },
+        {
+          "path": "/repos/{owner}/{repo}/secret-scanning/alerts",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/secret-scanning/scan-history",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "secret_scanning_bypass_requests": {
+      "title": "Secret scanning push protection bypass requests",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/bypass-requests/secret-scanning",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "secrets": {
+      "title": "Secrets",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/actions/organization-secrets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/secrets",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/secrets/{secret_name}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/secrets/public-key",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "actions_variables": {
+      "title": "Variables",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/actions/organization-variables",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/variables",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/actions/variables/{name}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "repository_hooks": {
+      "title": "Webhooks",
+      "category": "repository",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/hooks",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/hooks/{hook_id}",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/hooks/{hook_id}/config",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/hooks/{hook_id}/deliveries",
+          "access": "read",
+          "additional": false
+        },
+        {
+          "path": "/repos/{owner}/{repo}/hooks/{hook_id}/deliveries/{delivery_id}",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "workflows": {
+      "title": "Workflows",
+      "category": "repository",
+      "accessLevels": [
+        "write"
+      ],
+      "get": []
+    },
+    "blocking": {
+      "title": "Block another user",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": []
+    },
+    "codespaces_user_secrets": {
+      "title": "Codespaces user secrets",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": []
+    },
+    "emails": {
+      "title": "Email addresses",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": []
+    },
+    "followers": {
+      "title": "Followers",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": []
+    },
+    "gpg_keys": {
+      "title": "GPG keys",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": []
+    },
+    "gists": {
+      "title": "Gists",
+      "category": "account",
+      "accessLevels": [
+        "write"
+      ],
+      "get": []
+    },
+    "keys": {
+      "title": "Git SSH keys",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/users/{username}/keys",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "interaction_limits": {
+      "title": "Interaction limits",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": []
+    },
+    "user_issue_fields": {
+      "title": "Issue Fields",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": []
+    },
+    "user_issue_types": {
+      "title": "Issue Types",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": []
+    },
+    "private_repository_invitations": {
+      "title": "Private repository invitations",
+      "category": "account",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/repos/{owner}/{repo}/invitations",
+          "access": "read",
+          "additional": true
+        }
+      ]
+    },
+    "profile": {
+      "title": "Profile",
+      "category": "account",
+      "accessLevels": [
+        "write"
+      ],
+      "get": []
+    },
+    "git_signing_ssh_public_keys": {
+      "title": "SSH signing keys",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": []
+    },
+    "starring": {
+      "title": "Starring",
+      "category": "account",
+      "accessLevels": [
+        "read",
+        "write"
+      ],
+      "get": [
+        {
+          "path": "/users/{username}/starred",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    },
+    "watching": {
+      "title": "Watching",
+      "category": "account",
+      "accessLevels": [
+        "read"
+      ],
+      "get": [
+        {
+          "path": "/users/{username}/subscriptions",
+          "access": "read",
+          "additional": false
+        }
+      ]
+    }
+  }
+}

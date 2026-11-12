@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GH Settings">
+  <rect width="64" height="64" rx="14" fill="#0d1117"/>
+  <g stroke-linecap="round" stroke-width="5">
+    <line x1="16" y1="20" x2="48" y2="20" stroke="#30363d"/>
+    <line x1="16" y1="32" x2="48" y2="32" stroke="#30363d"/>
+    <line x1="16" y1="44" x2="48" y2="44" stroke="#30363d"/>
+  </g>
+  <circle cx="38" cy="20" r="6" fill="#4493f8"/>
+  <circle cx="24" cy="32" r="6" fill="#3fb950"/>
+  <circle cx="42" cy="44" r="6" fill="#d29922"/>
+</svg>

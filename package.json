@@ -1,0 +1,80 @@
+{
+  "name": "gh-settings-viewer",
+  "version": "0.1.0",
+  "description": "Read-only local viewer for GitHub enterprise, organization and repository settings, through a read-only GitHub App. Shows only what the app can read.",
+  "type": "module",
+  "bin": {
+    "gh-settings-viewer": "bin/gh-settings-viewer.js"
+  },
+  "files": [
+    "bin/",
+    "dist/",
+    "docs/permissions.md",
+    ".env.example",
+    "SETUP.md"
+  ],
+  "engines": {
+    "node": ">=26"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1 --port 4783",
+    "build": "node scripts/build.mjs",
+    "build:cli": "tsc -p tsconfig.cli.json",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.cli.json",
+    "test": "node --test \"tests/**/*.test.ts\"",
+    "check:registry": "node scripts/check-registry.ts",
+    "gen:permissions": "node scripts/gen-permissions-table.ts",
+    "update:permissions-data": "node scripts/update-permissions-data.mjs",
+    "verify:pack": "node scripts/verify-pack.mjs",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "github",
+    "github-app",
+    "settings",
+    "enterprise",
+    "organization",
+    "read-only",
+    "cli",
+    "npx",
+    "dx",
+    "developer",
+    "tool"
+  ],
+  "author": "Hansel Wei",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darkmastermindz/gh-settings-viewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/darkmastermindz/gh-settings-viewer/issues"
+  },
+  "homepage": "https://github.com/darkmastermindz/gh-settings-viewer#readme",
+  "dependencies": {
+    "@octokit/core": "^7.0.8",
+    "@octokit/plugin-paginate-rest": "^14.0.0",
+    "@octokit/plugin-throttling": "^11.0.5",
+    "env-paths": "^3.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@next/eslint-plugin-next": "^16.4.6",
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "next": "^16.4.6",
+    "postcss": "^8.5.32",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2"
+  }
+}
