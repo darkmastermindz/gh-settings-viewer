@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Offline · GitHub settings viewer</title>
+    <link rel="icon" href="/icons/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <style>
+      :root { color-scheme: light dark; --bg: #ffffff; --fg: #1f2328; --muted: #59636e; --border: #d0d7de; }
+      @media (prefers-color-scheme: dark) { :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --border: #30363d; } }
+      body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.5 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+      main { max-width: 36rem; margin: 0 auto; padding: 4rem 1rem; }
+      h1 { font-size: 1.5rem; margin: 1rem 0 0.5rem; }
+      p { color: var(--muted); }
+      code { border: 1px solid var(--border); border-radius: 6px; padding: 0.1rem 0.35rem; }
+      button { font: inherit; border: 1px solid var(--border); background: transparent; color: var(--fg); border-radius: 6px; padding: 0.4rem 0.9rem; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="/icons/icon.svg" width="48" height="48" alt="" />
+      <h1>You're offline</h1>
+      <p>GitHub settings are read live and never stored for offline use, so there's nothing to show without a connection.</p>
+      <p>If you're online, the viewer may have stopped. Start it again with <code>npx gh-settings-viewer</code>.</p>
+      <button type="button" onclick="location.reload()">Try again</button>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+# If your branch is rebased automatically and you have local commits, 
+# your attempt to push to the remote branch will be rejected. 
+# In that case, you can rebase your local commits on latest changes by executing git pull --rebase.
+
+name: Rebase Pull Requests
+on:
+  workflow_dispatch: 
+  push:
+    branches: [main]
+jobs:
+  rebase:
+    runs-on: ubuntu-latest
+    steps:
+      - uses:  peter-evans/rebase@v4
+        with:
+          exclude-labels: |
+            no-rebase

@@ -1,0 +1,67 @@
+# Publishes to npm when a release is created (same flow as line-commenter-tool):
+# tests, a check that the version isn't already published, then an OTP from your authenticator.
+name: Node.js Package
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  build:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run build
+      - run: npm run verify:pack
+
+  publish-npm:
+    permissions:
+      id-token: write
+      contents: read
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://registry.npmjs.org/
+      - name: Fail early if this version is already on npm
+        run: |
+          NAME=$(node -p "require('./package.json').name")
+          VERSION=$(node -p "require('./package.json').version")
+          if npm view "$NAME@$VERSION" version >/dev/null 2>&1; then
+            echo "::error::$NAME@$VERSION is already published. Bump package.json before tagging a release."
+            exit 1
+          fi
+      - name: Verify npm token before requesting OTP
+        run: npm whoami
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - uses: darkmastermindz/wait-for-secrets@1b5c3924e4cbc0792364f0f15f8572f7203c45d2 # main (node24, PR #1)
+        id: wait-for-secrets
+        with:
+          secrets: |
+            OTP:
+              name: 'OTP to publish package'
+              description: 'OTP from authenticator app'
+      - run: npm cache clean --force
+      - run: npm ci
+      # prepack builds dist/ (compiled CLI + Next.js standalone bundle)
+      - run: npm publish --otp ${{ steps.wait-for-secrets.outputs.OTP }}
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
